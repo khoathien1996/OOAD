@@ -301,7 +301,7 @@ namespace QuanLyHocSinh_OOAD
                     if (MainDataGrid.SelectedIndex > -1)
                     {
                         DataRowView row = (DataRowView)MainDataGrid.SelectedItem;
-                        SuaGiaoVien _suagv = new SuaGiaoVien(row["Mã giáo viên"].ToString(), row["Họ tên"].ToString(), row["Giới tính"].ToString(), row["Khoa"].ToString(), row["CMND"].ToString(), row["Ngày vào làm"].ToString(), row["Hệ số"].ToString(), row["Mức lương"].ToString(), row["Địa chỉ"].ToString(), 0);
+                        SuaGiaoVien _suagv = new SuaGiaoVien(row["Mã giáo viên"].ToString(), row["Họ tên"].ToString(), row["Giới tính"].ToString(), row["Khoa Quản Lý"].ToString(), row["CMND"].ToString(), row["Ngày vào làm"].ToString(), row["Hệ số"].ToString(), row["Mức lương"].ToString(), row["Địa chỉ"].ToString(), 0);
                         _suagv.ShowDialog();
                     }
                     break;
@@ -612,13 +612,14 @@ namespace QuanLyHocSinh_OOAD
 
         private void buttonREFRES_Click(object sender, RoutedEventArgs e)
         {
+            txtSearch.Text = "Tìm kiếm";
             switch (iBang)
             {
                 case 1:
                     LoadData("SELECT MALOP AS 'Mã lớp', TENLOP AS 'Tên lớp', SISO AS 'Sĩ số', MAGVCN AS 'Mã GVCN', HOTEN AS 'Họ và tên GVCN' FROM LOP, GIAOVIEN WHERE LOP.MAGVCN = GIAOVIEN.MAGV ");
                     break;
                 case 2:
-                    LoadData("SELECT MAGV AS 'Mã giáo viên', HOTEN AS 'Họ tên', GIOITINH AS 'Giới tính', TENKHOA AS 'Khoa', CMND AS 'CMND', NGVL AS 'Ngày vào làm', DIACHI AS 'Địa chỉ',HESO as 'Hệ số', MUCLUONG as 'Mức lương' FROM GIAOVIEN, KHOA WHERE KHOA = MAKHOA");
+                    LoadData("SELECT MAGV AS 'Mã giáo viên', HOTEN AS 'Họ tên', GIOITINH AS 'Giới tính', TENKHOA AS 'Khoa Quản Lý', CMND AS 'CMND', NGVL AS 'Ngày vào làm', DIACHI AS 'Địa chỉ',HESO as 'Hệ số', MUCLUONG as 'Mức lương' FROM GIAOVIEN, KHOA WHERE KHOA = MAKHOA");
                     break;
                 case 3:
                     LoadData("SELECT MAMH AS 'Mã môn học', TENMH AS 'Tên môn học', TENKHOA AS 'Khoa quản lý', HESO1 AS 'Số điểm HS1', HESO2 AS 'Số điểm HS2' FROM MONHOC, KHOA WHERE MONHOC.KHOA = KHOA.MAKHOA");
@@ -660,13 +661,13 @@ namespace QuanLyHocSinh_OOAD
             switch (iBang)
             {
                 case 1:
-                    SearchInfo(string.Concat("select * from LOP where MALOP like '%", txtSearch.Text, "%' or TENLOP like N'%", txtSearch.Text, "%'"));
+                    SearchInfo(string.Concat("SELECT MALOP AS 'Mã lớp', TENLOP AS 'Tên lớp', SISO AS 'Sĩ số', MAGVCN AS 'Mã GVCN', HOTEN AS 'Họ và tên GVCN' FROM LOP, GIAOVIEN WHERE LOP.MAGVCN = GIAOVIEN.MAGV and (MALOP like '%", txtSearch.Text, "%' or TENLOP like N'%", txtSearch.Text, "%')"));
                     break;
                 case 2:
                     SearchInfo(string.Concat("SELECT MAGV AS 'Mã giáo viên', HOTEN AS 'Họ tên', GIOITINH AS 'Giới tính', TENKHOA AS 'Khoa quản lý', CMND AS 'CMND', NGVL AS 'Ngày vào làm', DIACHI AS 'Địa chỉ',HESO as 'Hệ số', MUCLUONG as 'Mức lương' from GIAOVIEN, KHOA where (MAGV like '%", txtSearch.Text, "%' or HOTEN like N'%", txtSearch.Text, "%' ) AND KHOA = MAKHOA"));
                     break;
                 case 3:
-                    SearchInfo(string.Concat("SELECT MAMH AS 'Mã môn học', TENMH AS 'Tên môn học', HESO1 AS 'Số điểm HS1', HESO2 AS 'Số điểm HS2' from MONHOC where MAMH like '%", txtSearch.Text, "%' or TENMH like N'%", txtSearch.Text, "%'"));
+                    SearchInfo(string.Concat("SELECT MAMH AS 'Mã môn học', TENMH AS 'Tên môn học', TENKHOA AS 'Khoa quản lý', HESO1 AS 'Số điểm HS1', HESO2 AS 'Số điểm HS2' FROM MONHOC, KHOA WHERE MONHOC.KHOA = KHOA.MAKHOA and( MAMH like '%", txtSearch.Text, "%' or TENMH like N'%", txtSearch.Text, "%')"));
                     break;
                 case 4:
                     SearchInfo(string.Concat("select MAHS AS 'Mã học sinh', HOTEN AS 'Họ tên', NGSINH AS 'Ngày sinh', GIOITINH AS 'Giới tính', CMND AS 'CMND', NOISINH AS 'Nơi sinh', DIACHI AS 'Địa chỉ',MALOP as 'Mã lớp' from HOCSINH where ( HOTEN like N'%", txtSearch.Text, "%' or DIACHI like N'%", txtSearch.Text, "%' ) and left(MALOP,2) = 10 and NAMHOC = '", comboBox1.SelectedItem.ToString(), "'"));
