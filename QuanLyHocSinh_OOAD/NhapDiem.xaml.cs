@@ -14,8 +14,8 @@ namespace QuanLyHocSinh_OOAD
         public NhapDiem()
         {
             InitializeComponent();
-            fill_combobox_MON();
             fill_combobox_Check_lop();
+            
             check_lophoc.SelectedIndex = 0;
             Load_DataGrid(check_lophoc.SelectedItem.ToString());
         }
@@ -27,18 +27,26 @@ namespace QuanLyHocSinh_OOAD
 
         void fill_combobox_MON()
         {
+            int khoi = Convert.ToInt32(check_lophoc.Text.ToString().Substring(0, 2));
             try
             {
                 conn.Open();
-                string Query = "SELECT * FROM MONHOC";
+                string Query = "SELECT * FROM MONHOC where KHOI = '"+khoi+"'";
                 SqlCommand cm = new SqlCommand(Query, conn);
                 cm.Connection = conn;
-                SqlDataReader dr = cm.ExecuteReader();
-                while (dr.Read())
-                {
-                    string MAMONHOC = dr.GetString(0);
-                    box_mon.Items.Add(MAMONHOC);
-                }
+                //SqlDataReader dr = cm.ExecuteReader();
+                //while (dr.Read())
+                //{
+                //    string MAMONHOC = dr.GetString(0);
+                //    box_mon.Items.Add(MAMONHOC);
+                //}
+                SqlDataAdapter da = new SqlDataAdapter(cm);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                box_mon.ItemsSource = dt.DefaultView;
+                box_mon.DisplayMemberPath = "TENMH";
+                box_mon.SelectedValuePath = "MAMH";
+                
                 conn.Close();
 
             }
@@ -93,6 +101,7 @@ namespace QuanLyHocSinh_OOAD
                 dtDataTable.Clear();
                 sdaDataAdapter.Fill(dtDataTable);
                 data_grid.ItemsSource = dtDataTable.DefaultView;
+                fill_combobox_MON();
             }
             catch (SqlException)
             {
@@ -117,7 +126,6 @@ namespace QuanLyHocSinh_OOAD
         private int GetHeso1(string maMonhoc)
         {
             int heso;
-            
             try
             {
                 conn.Open();
@@ -175,7 +183,7 @@ namespace QuanLyHocSinh_OOAD
             h2d2.IsEnabled = true;
             h2d1.IsEnabled = true;
 
-            switch (GetHeso1(box_mon.SelectedItem.ToString()))
+            switch (GetHeso1(box_mon.SelectedValue.ToString()))
             {
                 case 5:
                     break;
@@ -201,7 +209,7 @@ namespace QuanLyHocSinh_OOAD
                     break;
             }
 
-            switch (GetHeso2(box_mon.SelectedItem.ToString()))
+            switch (GetHeso2(box_mon.SelectedValue.ToString()))
             {
                 case 5:
                     break;

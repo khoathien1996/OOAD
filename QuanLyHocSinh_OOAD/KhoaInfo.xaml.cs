@@ -98,6 +98,11 @@ namespace QuanLyHocSinh_OOAD
 
             string strMaGV;
             string strMaKhoa;
+            if (txtTenKhoa.Text.Length < 1)
+            {
+                MessageBox.Show("Mời bạn nhập tên khoa");
+                return;
+            }
 
             if (cmbTruongKhoa.SelectedIndex < 0)
             {
@@ -226,6 +231,11 @@ namespace QuanLyHocSinh_OOAD
             strOldMaKhoa = "";
 
             LoadData("select MAKHOA as 'Mã khoa', TENKHOA as 'Tên khoa', TRGKHOA as 'Mã trưởng khoa' from KHOA");
+
+        }
+
+        private void dgvKhoa_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
 
         }
     }

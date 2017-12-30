@@ -12,7 +12,7 @@
         <ComboBox x:Name="cmbTruongKhoa" HorizontalAlignment="Left" Margin="292,138,0,0" VerticalAlignment="Top" Width="256"/>
         <Button x:Name="btnLuu" Content="Lưu" HorizontalAlignment="Left" Margin="356,205,0,0" VerticalAlignment="Top" Width="75" Click="btnLuu_Click"/>
         <Button x:Name="btnHuy" Content="Hủy" HorizontalAlignment="Left" Margin="470,205,0,0" VerticalAlignment="Top" Width="75" Click="btnHuy_Click"/>
-        <DataGrid x:Name="dgvKhoa" HorizontalAlignment="Left" Margin="10,264,0,0" VerticalAlignment="Top" Height="240" Width="631"/>
+        <DataGrid x:Name="dgvKhoa" HorizontalAlignment="Left" Margin="10,264,0,0" VerticalAlignment="Top" Height="240" Width="631" SelectionChanged="dgvKhoa_SelectionChanged" IsReadOnly="True"/>
         <Button x:Name="btnThoat" Content="Thoát" HorizontalAlignment="Left" Margin="554,525,0,0" VerticalAlignment="Top" Width="75" Click="btnThoat_Click"/>
         <Button x:Name="btnSua" Content="Sửa" HorizontalAlignment="Left" Margin="442,525,0,0" VerticalAlignment="Top" Width="75" Click="btnSua_Click"/>
         <Button x:Name="btnNhap" Content="Nhập" HorizontalAlignment="Left" Margin="326,525,0,0" VerticalAlignment="Top" Width="75" Click="btnNhap_Click"/>
