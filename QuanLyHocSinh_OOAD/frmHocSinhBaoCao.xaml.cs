@@ -8,8 +8,7 @@ namespace QuanLyHocSinh_OOAD
     /// <summary>
     /// Interaction logic for frmHocSinhBaoCao.xaml
     /// </summary>
-    public partial class frmHocSinhBaoCao : Window
-    {
+    public partial class frmHocSinhBaoCao : Window    {
         //public static string strConnectionString = "Data Source=DESKTOP-DLT0AO8;Initial Catalog=QLHS;Integrated Security=True";
         //SqlConnection conn = new SqlConnection(strConnectionString);
         SqlConnection conn = Connection.KetNoi();

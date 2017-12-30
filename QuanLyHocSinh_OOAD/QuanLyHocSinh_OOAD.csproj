@@ -114,10 +114,10 @@
       <DependentUpon>NhapDiem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Password.cs" />
-    <Compile Include="QLHSDataSet1.Designer.cs">
+    <Compile Include="QLHSDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLHSDataSet1.xsd</DependentUpon>
+      <DependentUpon>QLHSDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="QuyDinh.xaml.cs">
       <DependentUpon>QuyDinh.xaml</DependentUpon>
@@ -131,8 +131,8 @@
     <Compile Include="SuaGiaoVien.xaml.cs">
       <DependentUpon>SuaGiaoVien.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ThayDoiQuyDinh.xaml.cs">
-      <DependentUpon>ThayDoiQuyDinh.xaml</DependentUpon>
+    <Compile Include="ThayDoiQuyen.xaml.cs">
+      <DependentUpon>ThayDoiQuyen.xaml</DependentUpon>
     </Compile>
     <Compile Include="ThemGiaoVien.xaml.cs">
       <DependentUpon>ThemGiaoVien.xaml</DependentUpon>
@@ -225,7 +225,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ThayDoiQuyDinh.xaml">
+    <Page Include="ThayDoiQuyen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -277,16 +277,16 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="QLHSDataSet1.xsc">
-      <DependentUpon>QLHSDataSet1.xsd</DependentUpon>
+    <None Include="QLHSDataSet.xsc">
+      <DependentUpon>QLHSDataSet.xsd</DependentUpon>
     </None>
-    <None Include="QLHSDataSet1.xsd">
+    <None Include="QLHSDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLHSDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>QLHSDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QLHSDataSet1.xss">
-      <DependentUpon>QLHSDataSet1.xsd</DependentUpon>
+    <None Include="QLHSDataSet.xss">
+      <DependentUpon>QLHSDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

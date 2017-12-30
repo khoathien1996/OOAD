@@ -11,11 +11,12 @@
         <Label Content="Mật khẩu" HorizontalAlignment="Left" Height="26" Margin="45,84,0,0" VerticalAlignment="Top" Width="153"/>
         <Label Content="Mật khẩu mới" HorizontalAlignment="Left" Height="26" Margin="45,115,0,0" VerticalAlignment="Top" Width="153"/>
         <Label Content="Nhập lại mât khẩu mới" HorizontalAlignment="Left" Height="26" Margin="45,146,0,0" VerticalAlignment="Top" Width="153"/>
-        <Button Content="Lưu" HorizontalAlignment="Left" Height="40" Margin="394,206,0,0" VerticalAlignment="Top" Width="148" FontSize="20" Click="Button_Click" Background="#FF4E7AC7" BorderBrush="White" Foreground="White"/>
+        <Button Content="Lưu" HorizontalAlignment="Left" Height="40" Margin="218,193,0,0" VerticalAlignment="Top" Width="148" FontSize="20" Click="Button_Click" Background="#FF4E7AC7" BorderBrush="White" Foreground="White"/>
         <PasswordBox HorizontalAlignment="Left" Height="26" Margin="218,115,0,0" VerticalAlignment="Top" Width="324"/>
         <PasswordBox x:Name="matKhaumoi" HorizontalAlignment="Left" Height="26" Margin="218,115,0,0" VerticalAlignment="Top" Width="324" FontSize="20"/>
         <PasswordBox x:Name="matKhaumoi1" HorizontalAlignment="Left" Height="26" Margin="218,146,0,0" VerticalAlignment="Top" Width="324" FontSize="20"/>
         <PasswordBox x:Name="matKhau" HorizontalAlignment="Left" Height="26" Margin="218,84,0,0" VerticalAlignment="Top" Width="324" FontSize="20"/>
+        <Button Content="Thoát" HorizontalAlignment="Left" Height="40" Margin="394,193,0,0" VerticalAlignment="Top" Width="148" FontSize="20" Click="ButtonThoat_Click" Background="#FF4E7AC7" BorderBrush="White" Foreground="White"/>
 
     </Grid>
 </Window>

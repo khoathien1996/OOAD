@@ -26,5 +26,9 @@ namespace QuanLyHocSinh_OOAD
 
             }
         }
+        private void ButtonThoat_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

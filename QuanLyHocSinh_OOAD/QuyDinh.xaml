@@ -6,6 +6,9 @@
         mc:Ignorable="d"
         Title="QuyDinh" Height="400" Width="650">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="back1.png" Stretch="UniformToFill" TileMode="FlipXY"/>
+        </Grid.Background>
         <Label x:Name="label" Content="Số tuổi tối thiểu" HorizontalAlignment="Left" Margin="70,41,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtTuoiMin" HorizontalAlignment="Left" Height="23" Margin="248,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295"/>
         <Label x:Name="label_Copy" Content="Số tuổi tối đa" HorizontalAlignment="Left" Margin="70,111,0,0" VerticalAlignment="Top"/>

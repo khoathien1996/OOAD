@@ -6,6 +6,9 @@
         mc:Ignorable="d"
         Title="TruongInfo" Height="300" Width="700">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="back1.png" Stretch="UniformToFill" TileMode="FlipXY"/>
+        </Grid.Background>
         <Label x:Name="label" Content="Tên trường" HorizontalAlignment="Left" Margin="50,45,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtTenTrg" HorizontalAlignment="Left" Height="23" Margin="174,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="450"/>
         <Label x:Name="label1" Content="Địa chỉ" HorizontalAlignment="Left" Margin="50,106,0,0" VerticalAlignment="Top"/>

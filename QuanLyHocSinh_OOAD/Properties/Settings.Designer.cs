@@ -32,5 +32,15 @@ namespace QuanLyHocSinh_OOAD.Properties {
                 return ((string)(this["QLHSConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HONGPHUC;Initial Catalog=QLHS;Integrated Security=True")]
+        public string QLHSTongKet {
+            get {
+                return ((string)(this["QLHSTongKet"]));
+            }
+        }
     }
 }
