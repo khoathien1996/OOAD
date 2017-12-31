@@ -95,6 +95,9 @@
     <Compile Include="frmHocSinhBaoCao.xaml.cs">
       <DependentUpon>frmHocSinhBaoCao.xaml</DependentUpon>
     </Compile>
+    <Compile Include="frmTongKet.xaml.cs">
+      <DependentUpon>frmTongKet.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HocSinhInfo.xaml.cs">
       <DependentUpon>HocSinhInfo.xaml</DependentUpon>
     </Compile>
@@ -163,6 +166,10 @@
     <Page Include="frmHocSinhBaoCao.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmTongKet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HocSinhInfo.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -261,6 +268,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC_Report\GiaoVien.rdlc" />
+    <EmbeddedResource Include="TongKet.rdlc" />
     <None Include="DataSet_QLHS.xsc">
       <DependentUpon>DataSet_QLHS.xsd</DependentUpon>
     </None>

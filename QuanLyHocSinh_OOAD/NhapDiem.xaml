@@ -11,36 +11,36 @@
             <RowDefinition Height="366*"/>
         </Grid.RowDefinitions>
         <Label Content="Lớp học" HorizontalAlignment="Left" Height="29" Margin="30,78,0,0" VerticalAlignment="Top" Width="138"/>
-        <Label Content="Môn học" HorizontalAlignment="Left" Height="29" Margin="380,76,0,0" VerticalAlignment="Top" Width="139"/>
+        <Label Content="Môn học" HorizontalAlignment="Left" Height="29" Margin="361,78,0,0" VerticalAlignment="Top" Width="139"/>
         <ComboBox x:Name="box_mon" HorizontalAlignment="Left" Height="29" Margin="462,76,0,0" VerticalAlignment="Top" Width="184" SelectionChanged="box_mon_SelectionChanged"/>
         <Label Content="Mã học sinh" HorizontalAlignment="Left" Height="29" Margin="30,44,0,0" VerticalAlignment="Top" Width="138"/>
-        <Label Content="Tên học sinh" HorizontalAlignment="Left" Height="29" Margin="380,44,0,0" VerticalAlignment="Top" Width="138"/>
+        <Label Content="Tên học sinh" HorizontalAlignment="Left" Height="29" Margin="361,46,0,0" VerticalAlignment="Top" Width="138"/>
         <TextBlock x:Name="mahocsinh" HorizontalAlignment="Left" Height="29" Margin="124,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207" Cursor="None"/>
         <TextBlock x:Name="tenhocsinh" HorizontalAlignment="Left" Height="29" Margin="462,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="184"/>
         <TextBlock x:Name="malop" HorizontalAlignment="Left" Height="29" Margin="124,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207" Cursor="None"/>
         <Label Content="Học kì" HorizontalAlignment="Left" Height="29" Margin="30,112,0,0" VerticalAlignment="Top" Width="138" Grid.RowSpan="2"/>
-        <Label Content="Năm học" HorizontalAlignment="Left" Height="29" Margin="380,110,0,0" VerticalAlignment="Top" Width="138" Grid.RowSpan="2"/>
-        <ComboBox x:Name="box_hocky" HorizontalAlignment="Left" Height="29" Margin="124,110,0,0" VerticalAlignment="Top" Width="207" IsEditable="True" IsReadOnly="True" Text="1" Grid.RowSpan="2">
+        <Label Content="Năm học" HorizontalAlignment="Left" Height="29" Margin="361,1,0,0" VerticalAlignment="Top" Width="138" Grid.Row="1"/>
+        <ComboBox x:Name="box_hocky" HorizontalAlignment="Left" Height="29" Margin="126,110,0,0" VerticalAlignment="Top" Width="205" IsEditable="True" IsReadOnly="True" Text="1" Grid.RowSpan="2">
             <ComboBoxItem Content="1"/>
             <ComboBoxItem Content="2"/>
         </ComboBox>
         <TextBlock x:Name="namhoc" HorizontalAlignment="Left" Height="29" Margin="462,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="184" Grid.RowSpan="2"/>
-        <Label Content="Điểm hệ số 1" HorizontalAlignment="Left" Height="29" Margin="32,29,0,0" VerticalAlignment="Top" Width="138" Grid.Row="1"/>
-        <TextBox x:Name="h1d1" HorizontalAlignment="Left" Height="29" Margin="126,27,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
-        <TextBox x:Name="h1d2" HorizontalAlignment="Left" Height="29" Margin="231,27,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
-        <TextBox x:Name="h1d3" HorizontalAlignment="Left" Height="29" Margin="336,27,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
-        <TextBox x:Name="h1d4" HorizontalAlignment="Left" Height="29" Margin="441,27,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
-        <TextBox x:Name="h1d5" HorizontalAlignment="Left" Height="29" Margin="546,27,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
-        <Label Content="Điểm hệ số 2" HorizontalAlignment="Left" Height="29" Margin="32,63,0,0" VerticalAlignment="Top" Width="138" Grid.Row="1"/>
-        <TextBox x:Name="h2d1" HorizontalAlignment="Left" Height="29" Margin="126,61,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
-        <TextBox x:Name="h2d2" HorizontalAlignment="Left" Height="29" Margin="231,61,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
-        <TextBox x:Name="h2d3" HorizontalAlignment="Left" Height="29" Margin="336,61,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
-        <TextBox x:Name="h2d4" HorizontalAlignment="Left" Height="29" Margin="441,61,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
-        <TextBox x:Name="h2d5" HorizontalAlignment="Left" Height="29" Margin="546,61,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
-        <Label Content="Điểm thi" HorizontalAlignment="Left" Height="29" Margin="32,97,0,0" VerticalAlignment="Top" Width="138" Grid.Row="1"/>
-        <TextBox x:Name="diemthi" HorizontalAlignment="Left" Height="29" Margin="126,95,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Text="0"/>
-        <DataGrid x:Name="data_grid" HorizontalAlignment="Left" Height="185" Margin="40,190,0,0" Grid.Row="1" VerticalAlignment="Top" Width="606" SelectionChanged="data_grid_SelectionChanged"/>
-        <Button Content="Lưu" HorizontalAlignment="Left" Height="41" Margin="126,131,0,0" VerticalAlignment="Top" Width="205" Click="Button_Click" Grid.Row="1"/>
+        <Label Content="Điểm hệ số 1" HorizontalAlignment="Left" Height="29" Margin="32,35,0,0" VerticalAlignment="Top" Width="138" Grid.Row="1"/>
+        <TextBox x:Name="h1d1" HorizontalAlignment="Left" Height="29" Margin="126,33,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
+        <TextBox x:Name="h1d2" HorizontalAlignment="Left" Height="29" Margin="231,33,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
+        <TextBox x:Name="h1d3" HorizontalAlignment="Left" Height="29" Margin="336,33,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
+        <TextBox x:Name="h1d4" HorizontalAlignment="Left" Height="29" Margin="441,33,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
+        <TextBox x:Name="h1d5" HorizontalAlignment="Left" Height="29" Margin="546,33,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
+        <Label Content="Điểm hệ số 2" HorizontalAlignment="Left" Height="29" Margin="32,69,0,0" VerticalAlignment="Top" Width="138" Grid.Row="1"/>
+        <TextBox x:Name="h2d1" HorizontalAlignment="Left" Height="29" Margin="126,67,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
+        <TextBox x:Name="h2d2" HorizontalAlignment="Left" Height="29" Margin="231,67,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
+        <TextBox x:Name="h2d3" HorizontalAlignment="Left" Height="29" Margin="336,67,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
+        <TextBox x:Name="h2d4" HorizontalAlignment="Left" Height="29" Margin="441,67,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
+        <TextBox x:Name="h2d5" HorizontalAlignment="Left" Height="29" Margin="546,67,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="0"/>
+        <Label Content="Điểm thi" HorizontalAlignment="Left" Height="29" Margin="32,103,0,0" VerticalAlignment="Top" Width="138" Grid.Row="1"/>
+        <TextBox x:Name="diemthi" HorizontalAlignment="Left" Height="29" Margin="126,101,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Text="0"/>
+        <DataGrid x:Name="data_grid" HorizontalAlignment="Left" Height="185" Margin="40,196,0,0" Grid.Row="1" VerticalAlignment="Top" Width="606" SelectionChanged="data_grid_SelectionChanged"/>
+        <Button Content="Lưu" HorizontalAlignment="Left" Height="41" Margin="126,137,0,0" VerticalAlignment="Top" Width="205" Click="Button_Click" Grid.Row="1"/>
         <Label Content="Lớp học" HorizontalAlignment="Left" Height="29" Margin="32,10,0,0" VerticalAlignment="Top" Width="138"/>
         <ComboBox x:Name="check_lophoc" HorizontalAlignment="Left" Height="29" Margin="126,10,0,0" VerticalAlignment="Top" Width="205" SelectionChanged="check_lophoc_SelectionChanged" IsEditable="True" IsReadOnly="True" Text="12A01" DropDownClosed="check_lophoc_DropDownClosed"/>
 

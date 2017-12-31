@@ -56,8 +56,10 @@ namespace QuanLyHocSinh_OOAD
                 {
                     iIndex++;
                     comboBox1.Items.Add(drDataReader.GetString(0));
-                    ComboBoxa.Items.Add(drDataReader.GetString(0));
+                    ComboBoxa.Items.Add(drDataReader.GetString(0) + " HK1");
+                    ComboBoxa.Items.Add(drDataReader.GetString(0) + " HK2");
                 }
+                
                 btnLop.Background = new SolidColorBrush(Colors.DarkBlue);
             }
             catch (SqlException)
@@ -745,7 +747,8 @@ namespace QuanLyHocSinh_OOAD
 
         private void buttonINlop_Click(object sender, RoutedEventArgs e)
         {
-
+            frmTongKet frm = new frmTongKet();
+            frm.ShowDialog();
         }
 
         private void txtSearch_TextInput(object sender, TextCompositionEventArgs e)
@@ -808,19 +811,6 @@ namespace QuanLyHocSinh_OOAD
             }
         }
 
-        private void Grid_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            if (treeView.SelectedValue == null)
-                return;
-            string strName = treeView.SelectedValue.ToString();
-            if (strName.Substring(2, 1) != "A")
-                return;
-
-            string str = String.Concat("SELECT HOCSINH.MAHS AS 'Mã học sinh', HOTEN AS 'Tên học sinh', NGSINH AS 'Ngày sinh', HOCKY AS 'Học kỳ', DTB_HOCKY AS 'Điểm trung bình học kỳ', XEPLOAI AS 'Xếp loại' FROM TONGKET, HOCSINH WHERE TONGKET.MAHS = HOCSINH.MAHS AND MALOP = '" + treeView.SelectedValue.ToString() + "' AND HOCSINH.NAMHOC = '" + ComboBoxa.Text + "'");
-
-            NewLoadData(str);
-        }
-
         private void ComboBoxa_DropDownClosed(object sender, EventArgs e)
         {
 
@@ -866,6 +856,20 @@ namespace QuanLyHocSinh_OOAD
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void treeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            int hk = int.Parse(ComboBoxa.Text.Substring(8, 1));
+            if (treeView.SelectedValue == null)
+                return;
+            string strName = treeView.SelectedValue.ToString();
+            if (strName.Substring(2, 1) != "A")
+                return;
+
+            string str = String.Concat("SELECT HOCSINH.MAHS AS 'Mã học sinh', HOTEN AS 'Tên học sinh', NGSINH AS 'Ngày sinh', HOCKY AS 'Học kỳ', DTB_HOCKY AS 'Điểm trung bình học kỳ', XEPLOAI AS 'Xếp loại' FROM TONGKET, HOCSINH WHERE TONGKET.MAHS = HOCSINH.MAHS AND MALOP = '" + treeView.SelectedValue.ToString() + "' AND HOCSINH.NAMHOC = '" + ComboBoxa.Text.Substring(0,5) + "' AND TONGKET.HOCKY = '" + hk.ToString() + "'");
+
+            NewLoadData(str);
         }
     }
 }
